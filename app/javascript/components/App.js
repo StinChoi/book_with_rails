@@ -1,10 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
 import Titles from "./Titles"
 
-const Book = (props) => {
+const App = (props) => {
   const [titles, setTitles] = useState([])
 
-  const getTitles = () => {
+  const getTitles = (title) => {
     console.log("clicked, TODO: make this work")
   }
   return (
@@ -16,4 +17,4 @@ const Book = (props) => {
   );
 }
 
-export default Book;
+export default App;
