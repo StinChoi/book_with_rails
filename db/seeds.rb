@@ -7,12 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 
-catagories = ["title", "author"]
+catagories = ["title", "author", "misc"]
 
-10.times do |i|
-  Book.create(
-    title: Faker::Hacker.abbreviation,
-    author: Faker::Hacker.say_something_smart,
+10.times
+  Title.create(
+    title: Faker::Hacker.say_something_smart,
+    author: Faker::Hacker.abbreviation,
     category: catagories.sample,
+
   )
 end
