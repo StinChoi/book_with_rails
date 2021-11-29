@@ -9,11 +9,10 @@ require "faker"
 
 catagories = ["title", "author", "misc"]
 
-10.times
-  Title.create(
+10.times do
+  Book.create(
     title: Faker::Hacker.say_something_smart,
     author: Faker::Hacker.abbreviation,
     category: catagories.sample,
-
   )
 end

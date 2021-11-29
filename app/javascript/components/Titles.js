@@ -2,7 +2,7 @@ import React from "react";
 import Title from "./Title";
 
 const Titles = (props) => {
-  const { titles, updateTitle, deleteTitle } = props;
+  const { titles } = props;
   return (
     // wrote this code to be able to style in CSS
     <div style={styles.container}>
@@ -11,8 +11,6 @@ const Titles = (props) => {
         <Title
           key={title.id}
           {...title}
-          updateTitle={updateTitle}
-          deleteTitle={deleteTitle}
         />
       ))}
     </div>
@@ -23,7 +21,7 @@ export default Titles;
 
 const styles = {
   container: {
-    border: "1px solid red",
+    border: "1px solid black",
     margin: "10px",
     padding: "10px",
   },

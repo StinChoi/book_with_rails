@@ -6,8 +6,8 @@ class TitlesController < ApplicationController
   end
 
   # Following James lesson, below should all render json
-  def title
-    render json: Title.all
+  def index
+    render json: Book.all
   end
 
   def show
@@ -15,7 +15,7 @@ class TitlesController < ApplicationController
   end
 
   def create
-    @title = Title.new(title_params)
+    @title = Book.new(title_params)
     if (@title.save)
       render json: @title
     else
@@ -38,7 +38,7 @@ class TitlesController < ApplicationController
   private
 
   def set_title
-    @title = Title.find(params[:id])
+    @title = Book.find(params[:id])
   end
 
   def title_params
